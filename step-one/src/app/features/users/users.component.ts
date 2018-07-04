@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { MessagesService } from './messages.services';
-
+import { UsersService } from './users.service';
 @Component({
-  selector: 'page-messages',
-  templateUrl: 'messages.html',
-  providers:[MessagesService]
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class MessagesComponent implements OnInit {
+export class UsersComponent implements OnInit {
 
   public message : string;
   public messages : any = [];
 
-  constructor(public messagesServices: MessagesService) {
+  constructor(public usersServices: UsersService) {
   }
 
   ngOnInit() {
     //first wwe subscribe to messages observable
-    this.messagesServices.getMessages().subscribe(
+    this.usersServices.getUsers().subscribe(
       result=>{
         console.log({result});
         this.messages=result;
@@ -30,10 +29,6 @@ export class MessagesComponent implements OnInit {
 
   load() {
     //ask to update data
-    this.messagesServices.update();
-  }
-
-  postMessage() {
-    this.messages = this.messagesServices.postMessage(this.message);
+    this.usersServices.update();
   }
 }

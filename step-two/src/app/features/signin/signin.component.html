@@ -1,0 +1,9 @@
+<div>
+  <h1>Welcome</h1>
+  <div>
+    <input placeholder="login" [(ngModel)]="username" type="text"/>
+    <input placeholder="password" [(ngModel)]="password" type="password"/>
+    <button (click)="signin()">Sign in</button>
+    <button routerLink="/signup">Create account</button>
+  </div>
+</div>

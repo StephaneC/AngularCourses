@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { MessagesService } from './messages.services';
+import { Message } from './message';
 
 @Component({
-  selector: 'page-messages',
+  selector: 'app-messages',
   templateUrl: 'messages.html',
   providers:[MessagesService]
 })
 export class MessagesComponent implements OnInit {
 
   public message : string;
-  public messages : any = [];
+  public messages : Message[] = [];
 
   constructor(public messagesServices: MessagesService) {
   }
@@ -34,6 +35,6 @@ export class MessagesComponent implements OnInit {
   }
 
   postMessage() {
-    this.messages = this.messagesServices.postMessage(this.message);
+    this.messagesServices.postMessage(this.message);
   }
 }
