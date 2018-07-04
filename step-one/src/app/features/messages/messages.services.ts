@@ -20,7 +20,7 @@ export class MessagesService {
 
   update(){
     // ask to get new content
-    this.http.get('http://cesi.cleverapps.io/messages', {observe: 'response'}).subscribe(res => {
+    this.http.get<Message[]>('http://cesi.cleverapps.io/messages', {observe: 'response'}).subscribe(res => {
         if(res.status === 200){
             var messages = res.body;
             //TODO localStorage.set('messages', messages); 
