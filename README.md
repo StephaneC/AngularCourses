@@ -4,3 +4,6 @@
 2. [step-one](./step_one) : Alias sur les imports, ou comment avoir des imports propres
 3. [step-two](./step_two) : Observables
 4. [step-three](./step_three) : Lazy loading
+
+## TODO
+Mise en place d' l'AoT.
