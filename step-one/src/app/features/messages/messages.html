@@ -2,6 +2,9 @@
   <ul>
       <li *ngFor="let message of messages">
           {{message.message}}
+          <br>
+          <span>{{message.username}}</span><br>
+          <span>{{message.date | customDate}}</span>
       </li>
   </ul>
   <div>

@@ -9,13 +9,14 @@ import { TokenInterceptor } from '@core/token.interceptor';
 
 import { SigninComponent } from './features/signin/signin.component';
 import { MessagesComponent } from './features/messages/messages.component';
-
+import { DatePipe } from './shared/date.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    MessagesComponent
+    MessagesComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,
