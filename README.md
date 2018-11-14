@@ -4,4 +4,7 @@
 2. [step-one](./step_one) : Alias sur les imports, ou comment avoir des imports propres
 3. [step-two](./step_two) : Observables
 4. [step-three](./step_three) : Lazy loading
-5. [step-four](./step_four) : Form Control
+5. [step-four](./step_four) 
+* Update Angular 7
+* Form Control
+* Material components
