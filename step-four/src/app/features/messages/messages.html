@@ -1,0 +1,11 @@
+<mat-list>
+    <mat-list-item *ngFor="let message of messages">
+        <h4 mat-line>{{message.message}}</h4>
+        <p mat-line> {{message.timestamp}} </p>
+        <p mat-line> {{message.username}} </p>
+    </mat-list-item>
+</mat-list>
+<div>
+    <input type="text" [(ngModel)]="message" placeholder="Your message" />
+    <button (click)="postMessage();">Send</button>
+</div>
